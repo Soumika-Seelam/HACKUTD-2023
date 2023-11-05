@@ -17,7 +17,7 @@ export default function Mentors() {
         <div className="card-row" key={rowIndex}>
             {row.map((character, index) => (
             <div className="card" key={index}>
-              <Card image={character.image} name={character.name} bio={character.bio} />
+              <Card image={character.image} name={character.name} bio={character.bio} id={character.id}/>
             </div>
         ))}
         </div>

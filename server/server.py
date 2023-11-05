@@ -11,7 +11,7 @@ CORS(app)
 
 def simulate_conversation(personality, user_messages, bio):
     messages = [
-        {"role": "system", "content": "You are a chatbot that simulates a conversation with the personality of "+personality+"described. Please respond in a manner consistent with this personality's known communication style. The current person's personality is based of this bio:" + bio}
+        {"role": "system", "content": "You are a chatbot that simulates a conversation with the personality of "+personality+"described. Please respond in a manner consistent with this personality's known communication style. Try to keep it informational as possible. The current person's personality is based of this bio:" + bio}
     ] + user_messages
 
     try:
