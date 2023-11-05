@@ -8,11 +8,6 @@
 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 .txtanswers{
   font-size: 60%;
   text-align: left;
@@ -49,6 +44,26 @@ ul li {
   
 }
 
+.logo {
+  height: 75px;
+  align-self: left;
+}
+
+.icon {
+  max-height: 50px;
+  justify-content: first baseline;
+}
+
+.iconstext {
+  align-items: left;
+  flex-direction: row;
+  display: inline-flex;
+  float: left;
+  width: 100%;
+  justify-content: flex-start;
+  margin-left: 1%;
+}
+
 .nav {
   background-color: #fff;
   top: 0;
@@ -70,27 +85,35 @@ ul li {
 }
 
 .mainTitle {
+  background-image: url('./assets/Mentoring.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 80vh;
   top: 0;
   font-family: 'Roboto';
-  padding-top: 2%;
   font-size: 300%;
   font-weight: 600;
+  color: #F3F8F2;
+  margin-top: -5%;
+  
 }
 
 .sideText {
   font-size: 120%;
-  padding-left: 5%;
+  margin-left: 0.8%;
   text-align: left;
   font-family: Roboto;
   font-weight: 700;
   color: #67b359;
+  justify-content: left;
 }
 
-.heading1 {
-  font-family: 'Roboto';
-  padding-top: 10%;
-  font-size: 150%;
+.subheading {
+  font-size: 120%;
+  font-family: Roboto;
   font-weight: 700;
+  color: black;
 }
 
 .characters {

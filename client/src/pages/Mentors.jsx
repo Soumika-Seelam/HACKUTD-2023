@@ -10,6 +10,8 @@ export default function Mentors() {
     }
 
     return (
+        <div>
+        <div className='subheading'>Mentors</div> <br/>
         <div className="characters">
         {rows.map((row, rowIndex) => (
         <div className="card-row" key={rowIndex}>
@@ -20,6 +22,7 @@ export default function Mentors() {
         ))}
         </div>
       ))}
+    </div>
     </div>
   );
 }

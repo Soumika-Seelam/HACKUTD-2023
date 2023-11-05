@@ -11,7 +11,7 @@ export default function Chat() {
     const sendMessage = () => {
         const newMessage = { sender: 'client', message: input };
         setMessages([...messages, newMessage]);
-        setInput(''); // Clear input after sending
+        setInput('');
 
         container.scrollTop = container.scrollHeight;
     };
@@ -29,6 +29,7 @@ export default function Chat() {
 
     return (
         <div>
+            <div className='subheading'>Chat with Elon Musk </div> <br/>
             <div className='container'>
                 {messageDiv}
             </div>

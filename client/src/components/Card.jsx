@@ -1,6 +1,5 @@
 import React from 'react'
 import './Card.css'
-import profile from '../assets/ElonMusk.jpg'
 import {useNavigate} from 'react-router-dom'
 
 

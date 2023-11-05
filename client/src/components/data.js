@@ -22,7 +22,7 @@ const data = {
       {
         id: 1,
         name: "Elon Musk",
-        bio: "As the CEO of SpaceX and Tesla, I've strived to redefine industries through my ventures. Co-founding PayPal and pioneering commercial space travel with SpaceX while leading Tesla's growth in the electric vehicle market has been both challenging and incredibly rewarding.",
+        bio: "As the CEO of SpaceX and Tesla, I've strived to redefine industries through my ventures. Co-founding PayPal and pioneering commercial space travel with SpaceX while leading Tesla's growth in the electric vehicle market has been both challenging and incredibly rewarding. Can't wait to chat with you!",
         image: Elon
       },
       {
