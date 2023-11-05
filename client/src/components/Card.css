@@ -1,0 +1,43 @@
+.upc {
+    width: 350px;
+    margin: 20px;
+    border-radius: 25px;
+    padding-bottom: 20px;
+    background: hsl(110, 30%, 96%);
+    font-size: 55%;
+}
+
+.profile-title {
+    padding-top: 5%;
+    font-weight:550;
+    font-size: 110%;
+}
+
+.profile-description {
+    margin: 10%;
+}
+
+.cardbg {
+    background-image: #F3F8F2;
+    height: 125px;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.profile-down img {
+    height: 150px;
+    border-radius: 100px;
+    margin-top: -75px;
+    padding: 5px;
+    background: white;
+}
+
+.button {
+    margin-top: 2%;
+    padding: 2%;
+    height: 10%;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: #67b359;
+    border-radius: 20px;
+    color: white;
+}
