@@ -5,6 +5,7 @@
   text-align: center;
   justify-content: center;
   font-family: Inter;
+
 }
 
 .App-logo {
@@ -17,6 +18,7 @@
   text-align: left;
   padding-left: 5%;
   padding-right: 5%;
+  color: black;
 }
 
 ul{
@@ -72,7 +74,7 @@ ul li {
   font-family: 'Roboto';
   padding-top: 2%;
   font-size: 300%;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .sideText {
@@ -93,12 +95,21 @@ ul li {
 
 .characters {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-evenly;
   align-content: center;
   width: 100%;
   margin: auto;
   grid-template-columns: repeat(4, 1fr);
 }
+
+.card-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
 
 nav a {
   color: #fff;
