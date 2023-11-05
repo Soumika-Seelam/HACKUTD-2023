@@ -1,6 +1,6 @@
 import React, { useState, useEffect  } from 'react';
 import './Chat.css';
-import messageData from './messageData';
+//import messageData from './messageData';
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import mentorList from '../components/data'
@@ -9,9 +9,10 @@ export default function Chat() {
     const{ id } = useParams()
     console.log(id)
     const personality1 = mentorList.characterData[id-1].name
+    const description1 = mentorList.characterData[id-1].desc
     console.log(personality1)
 
-    const [messages, setMessages] = useState(messageData.messArray);
+    const [messages, setMessages] = useState([{message:`Hello, I am ${personality1}, what financial topic can I provide you information on?`,client:'gpt'}]);
     const [input, setInput] = useState(''); // State to capture input
     
     // Function to update the messages state with new message
@@ -23,9 +24,16 @@ export default function Chat() {
         console.log(messages)
         console.log(messages)
         let lastMessage = newMessage.message;
+        const context=""
+        for(let i =0; i < messages.length; i++){
+            context += messages[i].message
+            context += " NEW MESSAGE "
+        }
+        context += " Imagine this text as the text history between you and I, every NEW MESSAGE instance means that the speaker is now switched."
         let response = await axios.post('http://localhost:5000/gpt', {
             question: lastMessage,
-            personality: personality1
+            personality: personality1,
+            textHistory: context
           });
         let tempMessage = messages
         console.log(response)
@@ -46,7 +54,7 @@ export default function Chat() {
 
     return (
         <div>
-            <div className='subheading'>Chat with Elon Musk </div> <br/>
+            <div className='subheading'>Chat with {personality1}</div> <br/>
             <div className='container'>
                 {messageDiv}
             </div>
