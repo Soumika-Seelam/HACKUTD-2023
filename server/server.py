@@ -7,8 +7,8 @@ app = Flask(__name__)
 def members():
     return {"members": ["Member1", "Member2", "Member3"]}
 
-@app.route("/test")
-def test():
+@app.route("/gpt", methods=['POST'])
+def gpt():
     return{}
 
 if __name__ == "__main__":

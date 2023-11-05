@@ -1,0 +1,47 @@
+.container{
+    width: 50%;
+    height: 70vh;
+    background-color: #F3F8F2;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: auto;
+    border-radius: 10px 0px;
+    padding:5px;
+    margin-bottom: 0px;
+}
+.message{
+    padding:10px;
+    margin: 5px;
+    font-size: small;
+    border-radius: 20px;
+}
+.client-message{
+    align-self: flex-end;
+    background-color: #368727;
+    max-width:45%;
+    color: #fff;
+}
+.gpt-message{
+    align-self: flex-start;
+    background-color: #fff;
+    max-width: 55%;
+}
+.enter{
+    width: 40vw;
+    height: 4vh;
+    padding: 5px;
+}
+
+.inputButton {
+    background-color: #F3F8F2;
+    color: #368727;
+    height: 10%;
+
+}
+
+input {
+    width: 50%;
+    height: 100%;
+}
