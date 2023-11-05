@@ -9,7 +9,7 @@ export default function Chat() {
     const{ id } = useParams()
     console.log(id)
     const personality1 = mentorList.characterData[id-1].name
-    const description1 = mentorList.characterData[id-1].desc
+    const description1 = mentorList.characterData[id-1].des
     console.log(personality1)
 
     const [messages, setMessages] = useState([{message:`Hello, I am ${personality1}, what financial topic can I provide you information on?`,client:'gpt'}]);
@@ -24,7 +24,7 @@ export default function Chat() {
         console.log(messages)
         console.log(messages)
         let lastMessage = newMessage.message;
-        const context=""
+        let context=""
         for(let i =0; i < messages.length; i++){
             context += messages[i].message
             context += " NEW MESSAGE "
@@ -33,6 +33,7 @@ export default function Chat() {
         let response = await axios.post('http://localhost:5000/gpt', {
             question: lastMessage,
             personality: personality1,
+            bio: description1,
             textHistory: context
           });
         let tempMessage = messages
