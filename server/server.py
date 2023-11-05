@@ -9,9 +9,9 @@ openai.api_key = "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"
 app = Flask(__name__)
 CORS(app)
 
-def simulate_conversation(personality, user_messages):
+def simulate_conversation(personality, user_messages, bio):
     messages = [
-        {"role": "system", "content": "You are a chatbot that simulates a conversation with the personality described. Please respond in a manner consistent with this personality's known communication style."}
+        {"role": "system", "content": "You are a chatbot that simulates a conversation with the personality of "+personality+"described. Please respond in a manner consistent with this personality's known communication style. The current person's personality is based of this bio:" + bio}
     ] + user_messages
 
     try:
@@ -37,10 +37,13 @@ def gpt():
 
     #new code------
     if user_question:
-        conversation_history = [{"role": "user", "content": user_question}]
+        textHistory = data.get('textHistory')
+        conversation_history = [{"role": "user", "content": textHistory +" Latest Question: " + user_question}]
         personality = data.get('personality', "Elon Musk")  # Default personality
-    
-        response = simulate_conversation(personality, conversation_history)
+        bio = data.get('bio')
+        
+
+        response = simulate_conversation(personality, conversation_history, bio)
 
         return jsonify({"response": response})
 

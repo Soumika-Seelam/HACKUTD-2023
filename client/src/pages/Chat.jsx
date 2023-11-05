@@ -27,7 +27,7 @@ export default function Chat() {
         let context=""
         for(let i =0; i < messages.length; i++){
             context += messages[i].message
-            context += " NEW MESSAGE "
+            context += "\n"
         }
         context += " Imagine this text as the text history between you and I, every NEW MESSAGE instance means that the speaker is now switched."
         let response = await axios.post('http://localhost:5000/gpt', {
