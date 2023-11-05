@@ -7,7 +7,7 @@ import {useNavigate} from 'react-router-dom'
 export const Card = (props) => {
     const navigate = useNavigate()
     const navigateToChat = () => {
-        navigate('/chat')
+        navigate(`/chat/${props.id}`)
     }
   return (
     <div className='upc'>

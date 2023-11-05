@@ -22,7 +22,7 @@ export default function Home () {
           <div className = "card-row">
             {charactersToShow.map((character,index) => (
               <div key={index}>
-                <Card image={character.image} name={character.name} bio={character.bio}/>
+                <Card image={character.image} name={character.name} bio={character.bio} id={character.id}/>
               </div>
             ))}
           </div>
