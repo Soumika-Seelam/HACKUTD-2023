@@ -46,6 +46,7 @@ export default function Chat() {
 
     return (
         <div>
+            <div className='subheading'>Chat with Elon Musk </div> <br/>
             <div className='container'>
                 {messageDiv}
             </div>

@@ -1,14 +1,14 @@
-.upc {
+.resourceupc {
     width: 350px;
     margin: 20px;
     border-radius: 25px;
     padding-bottom: 20px;
     background: hsl(110, 30%, 96%);
     font-size: 55%;
-    min-height: 90%;
+    min-height: 80%;
 }
 
-.profile-title {
+.resourceprofile-title {
     padding-top: 5%;
     font-weight:550;
     font-size: 110%;
@@ -18,13 +18,17 @@
     margin: 10%;
 }
 
-.cardbg {
+p{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.resourcecardbg {
     background-image: #F3F8F2;
-    height: 125px;
     border-radius: 4px 4px 0px 0px;
 }
 
-.profile-down img {
+.resourceprofile-down img {
     height: 160px;
     width: 160px;
     border-radius: 100px;
@@ -33,7 +37,7 @@
     background: white;
 }
 
-.button {
+.resourcebutton {
     margin-top: 2%;
     padding: 2%;
     height: 10%;
